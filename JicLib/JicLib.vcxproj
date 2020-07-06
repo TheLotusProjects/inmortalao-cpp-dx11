@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{72990899-3AA5-4901-A75C-D7A2550EC631}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>JicLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>../Cliente/</OutDir>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./Sonido;./Personaje;./Capas;./Dibujadores;./Cargadores/;./Recursos/;./MotorGrafico/;./Extras/;./Cuerpos/;</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Capas\administradorRecursos.cpp" />
+    <ClCompile Include="Capas\capa1.cpp" />
+    <ClCompile Include="Capas\capa2.cpp" />
+    <ClCompile Include="Capas\capa3.cpp" />
+    <ClCompile Include="Capas\capa4.cpp" />
+    <ClCompile Include="Cargadores\armas.cpp" />
+    <ClCompile Include="Cargadores\cabezas.cpp" />
+    <ClCompile Include="Cargadores\cascos.cpp" />
+    <ClCompile Include="Cargadores\clima.cpp" />
+    <ClCompile Include="Cargadores\cuerpos.cpp" />
+    <ClCompile Include="Cargadores\escudos.cpp" />
+    <ClCompile Include="Cargadores\Texto.cpp" />
+    <ClCompile Include="Cargadores\fxs.cpp" />
+    <ClCompile Include="Cargadores\ini.cpp" />
+    <ClCompile Include="Cargadores\mapa.cpp" />
+    <ClCompile Include="Cargadores\npcs.cpp" />
+    <ClCompile Include="Cargadores\objetos.cpp" />
+    <ClCompile Include="Cargadores\particula.cpp" />
+    <ClCompile Include="Cargadores\particulaIndividual.cpp" />
+    <ClCompile Include="Cargadores\particulas.cpp" />
+    <ClCompile Include="Cuerpos\Jugador.cpp" />
+    <ClCompile Include="Cuerpos\Nps.cpp" />
+    <ClCompile Include="Dibujadores\Dibujador.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorArma.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorCabeza.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorCasco.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorCuerpo.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorEscudo.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorParticula.cpp" />
+    <ClCompile Include="Dibujadores\DibujadorTexto.cpp" />
+    <ClCompile Include="Extras\InputTeclas.cpp" />
+    <ClCompile Include="Extras\Timer.cpp" />
+    <ClCompile Include="GUI\Console.cpp" />
+    <ClCompile Include="GUI\Inventory.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp" />
+    <ClCompile Include="ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp" />
+    <ClCompile Include="ImGui\imgui_widgets.cpp" />
+    <ClCompile Include="MotorGrafico\AnimatedSprite.cpp" />
+    <ClCompile Include="MotorGrafico\Camara.cpp" />
+    <ClCompile Include="MotorGrafico\Directx11.cpp" />
+    <ClCompile Include="MotorGrafico\Fps.cpp" />
+    <ClCompile Include="MotorGrafico\Graphic.cpp" />
+    <ClCompile Include="MotorGrafico\lightshaderclass.cpp" />
+    <ClCompile Include="MotorGrafico\Luz.cpp" />
+    <ClCompile Include="MotorGrafico\Shader.cpp" />
+    <ClCompile Include="MotorGrafico\Sprite.cpp" />
+    <ClCompile Include="MotorGrafico\Textura.cpp" />
+    <ClCompile Include="MotorGrafico\VertexBuffer.cpp" />
+    <ClCompile Include="Personaje\personaje.cpp" />
+    <ClCompile Include="Recursos\Grafico.cpp" />
+    <ClCompile Include="Recursos\Recursos.cpp" />
+    <ClCompile Include="Sonido\Sonido.cpp" />
+    <ClCompile Include="UDP.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Capas\administradorRecursos.h" />
+    <ClInclude Include="Capas\capa1.h" />
+    <ClInclude Include="Capas\capa2.h" />
+    <ClInclude Include="Capas\capa3.h" />
+    <ClInclude Include="Capas\capa4.h" />
+    <ClInclude Include="Cargadores\armas.h" />
+    <ClInclude Include="Cargadores\cabezas.h" />
+    <ClInclude Include="Cargadores\cascos.h" />
+    <ClInclude Include="Cargadores\clima.h" />
+    <ClInclude Include="Cargadores\cuerpos.h" />
+    <ClInclude Include="Cargadores\escudos.h" />
+    <ClInclude Include="Cargadores\Texto.h" />
+    <ClInclude Include="Cargadores\fxs.h" />
+    <ClInclude Include="Cargadores\ini.h" />
+    <ClInclude Include="Cargadores\mapa.h" />
+    <ClInclude Include="Cargadores\npcs.h" />
+    <ClInclude Include="Cargadores\objetos.h" />
+    <ClInclude Include="Cargadores\particula.h" />
+    <ClInclude Include="Cargadores\particulaIndividual.h" />
+    <ClInclude Include="Cargadores\particulas.h" />
+    <ClInclude Include="Cuerpos\Jugador.h" />
+    <ClInclude Include="Cuerpos\Nps.h" />
+    <ClInclude Include="Dibujadores\Dibujador.h" />
+    <ClInclude Include="Dibujadores\DibujadorArma.h" />
+    <ClInclude Include="Dibujadores\DibujadorCabeza.h" />
+    <ClInclude Include="Dibujadores\DibujadorCasco.h" />
+    <ClInclude Include="Dibujadores\DibujadorCuerpo.h" />
+    <ClInclude Include="Dibujadores\DibujadorEscudo.h" />
+    <ClInclude Include="Dibujadores\DibujadorParticula.h" />
+    <ClInclude Include="Dibujadores\DibujadorTexto.h" />
+    <ClInclude Include="Extras\InputTeclas.h" />
+    <ClInclude Include="Extras\Timer.h" />
+    <ClInclude Include="GUI\Console.h" />
+    <ClInclude Include="GUI\Inventory.h" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="ImGui\imstb_truetype.h" />
+    <ClInclude Include="MotorGrafico\AnimatedSprite.h" />
+    <ClInclude Include="MotorGrafico\Camara.h" />
+    <ClInclude Include="MotorGrafico\Directx11.h" />
+    <ClInclude Include="MotorGrafico\Fps.h" />
+    <ClInclude Include="MotorGrafico\Graphic.h" />
+    <ClInclude Include="MotorGrafico\lightshaderclass.h" />
+    <ClInclude Include="MotorGrafico\Luz.h" />
+    <ClInclude Include="MotorGrafico\Shader.h" />
+    <ClInclude Include="MotorGrafico\Sprite.h" />
+    <ClInclude Include="MotorGrafico\Textura.h" />
+    <ClInclude Include="MotorGrafico\VertexBuffer.h" />
+    <ClInclude Include="Personaje\personaje.h" />
+    <ClInclude Include="Recursos\Grafico.h" />
+    <ClInclude Include="Recursos\Recursos.h" />
+    <ClInclude Include="Recursos\type.h" />
+    <ClInclude Include="Sonido\RCInterfaces.h" />
+    <ClInclude Include="Sonido\RCMacros.h" />
+    <ClInclude Include="Sonido\Sonido.h" />
+    <ClInclude Include="TCP.h" />
+    <ClInclude Include="UDP.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

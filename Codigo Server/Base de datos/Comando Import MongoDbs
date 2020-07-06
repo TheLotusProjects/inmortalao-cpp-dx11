@@ -1,0 +1,1 @@
+mongoimport --db inmortalAO --collection objetos --file objetosJsonDB.json --jsonArray

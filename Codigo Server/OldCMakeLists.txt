@@ -1,0 +1,38 @@
+cmake_minimum_required (VERSION 2.6)
+project (Servidor)
+# The version number.
+set (Servidor_VERSION_MAJOR 1)
+set (Servidor_VERSION_MINOR 0)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAG} -std=c++11 -pthread")
+
+
+##################### MONGODB #########################
+find_package(libmongocxx REQUIRED)
+find_package(libbsoncxx REQUIRED)
+include_directories(${LIBMONGOCXX_INCLUDE_DIR})
+include_directories(${LIBBSONCXX_INCLUDE_DIR})
+include_directories("/usr/local/include/mongocxx/v_noabi")
+include_directories("/usr/local/include/bsoncxx/v_noabi")
+include_directories("/usr/local/include/libmongoc-1.0")
+include_directories("/usr/local/include/libbson-1.0")
+include_directories("/usr/local/lib")
+#####################################################
+
+include_directories("${PROJECT_BINARY_DIR}")
+include_directories(${PROJECT_SOURCE_DIR}/lib)
+include_directories(${PROJECT_SOURCE_DIR}/src)
+
+
+add_library(libJson STATIC IMPORTED)
+set_property(TARGET libJson PROPERTY IMPORTED_LOCATION ../lib/libjsoncpp.a)
+
+
+# add the executable
+add_executable(Servidor ./src/main.cpp ./src/Program.cpp ./src/DB/DataBase.cpp ./src/Conexion/UDPConnection/DataUDPSocket.cpp ./src/Conexion/UDPConnection/ServerUDPSocket.cpp ./src/Conexion/UDPConnection/UDP.cpp ./src/Cargadores/Hechizo.cpp ./src/Cargadores/Hechizos.cpp ./src/Cargadores/Mapa.cpp ./src/Cargadores/Mapas.cpp ./src/Cargadores/Npc.cpp ./src/Cargadores/Npcs.cpp ./src/Cargadores/Obj.cpp ./src/Cargadores/Objs.cpp ./src/Cargadores/Personajes.cpp ./src/Cargadores/Resources.cpp ./src/Cargadores/Personaje.cpp ./src/Cargadores/Cuenta.cpp ./src/Conexion/Messagin/LogIn.cpp ./src/Conexion/Messagin/ConnectUser.cpp ./src/Common/split.cpp)
+
+target_link_libraries(Servidor libJson)
+
+############## MONGODB  ############################
+target_link_libraries(Servidor ${LIBMONGOCXX_LIBRARIES})
+target_link_libraries(Servidor ${LIBBSONCXX_LIBRARIES})

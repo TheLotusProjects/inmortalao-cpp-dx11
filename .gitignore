@@ -1,0 +1,15 @@
+/Servidor
+/JicLib/Debug/
+/EditorMapas/Debug
+/EditorParticulas/Debug
+/EditorIndices/Debug
+/Codigo cliente/Debug
+/Codigo Server/build
+Debug
+/InmortalAO.VC.VC.opendb
+/Cliente/*.exe
+/Cliente/*.pdb
+/Cliente/*.lib
+/Cliente/*.ilk
+.vs
+.DS_Store

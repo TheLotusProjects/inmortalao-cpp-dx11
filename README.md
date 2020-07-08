@@ -6,7 +6,7 @@
 
 ## Client
 
-[![Watch the video](https://img.youtube.com/vi/JMvPSk-qrz0/maxresdefault.jpg)](https://youtu.be/JMvPSk-qrz0)
+[![Watch the video](https://img.youtube.com/vi/JMvPSk-qrz0/default.jpg)](https://youtu.be/JMvPSk-qrz0)
 
 ## Map Editor
 

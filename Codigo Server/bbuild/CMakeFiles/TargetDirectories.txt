@@ -1,3 +1,0 @@
-/Users/joseignaciocastelli/Desktop/rfburyguer/Codigo Server/build/CMakeFiles/rebuild_cache.dir
-/Users/joseignaciocastelli/Desktop/rfburyguer/Codigo Server/build/CMakeFiles/edit_cache.dir
-/Users/joseignaciocastelli/Desktop/rfburyguer/Codigo Server/build/CMakeFiles/Servidor.dir

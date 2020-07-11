@@ -1,3 +1,5 @@
+
+
 // Copyright (c) Microsoft Corp. All rights reserved.
 //-----------------------------------------------------------------------------
 #define STRICT
